@@ -12,6 +12,13 @@
       <h4>Format</h4>
       <v-select v-model="format" :options="formats"></v-select>
 
+      <h4>Min and Max Dates</h4>
+      <datepicker ref="dp" v-model="date" :disabled-days-of-week="disabled" :format="format" :clear-button="clear"
+                  :placeholder="placeholder" width="370px"
+                  min-date="03/05/2017"
+                  max-date="03/12/2017"
+      ></datepicker>
+
       <h4>Reset button</h4>
       <checkbox :value="clear" @checked="clear = arguments[0]" type="primary">toggle clear button</checkbox>
     </div>
